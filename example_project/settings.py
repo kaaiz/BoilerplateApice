@@ -1,5 +1,5 @@
 """
-Django settings for {{ project_name }} project on Heroku. For more info, see:
+Django settings for example_project project on Heroku. For more info, see:
 https://github.com/4GeeksAcademy/django-rest-hello
 
 For more information on this file, see
@@ -22,7 +22,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "{{ secret_key }}"
+SECRET_KEY = "replace_me"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'django_extensions',
+    'rest_framework_swagger',
     'api',
 ]
 
@@ -57,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = '{{ project_name }}.urls'
+ROOT_URLCONF = 'example_project.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+WSGI_APPLICATION = 'example_project.wsgi.application'
 
 
 # Database
